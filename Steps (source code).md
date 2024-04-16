@@ -13,7 +13,7 @@ CREATE OR REPLACE FUNCTION
 If you do not have the necessary key or Cloud Function deployed, feel free to jump to the landing table directly by exporting the data from the csv into your new BigQuery dataset mdm_gemini using the following command in the Cloud Shell Terminal:
 Remember to download the file CITIBIKE_STATIONS.csv from this repo into your Cloud Shell project folder and navigate into that folder before executing the following command:
 
-bq load --source_format=CSV --skip_leading_rows=1 mdm_gemini.CITIBIKE_STATIONS ./CITIBIKE_STATIONS.csv \ name:string,latlng:string,capacity:numeric,num_bikes_available:numeric,num_docks_available:numeric,last_reported:timestamp,full_address_json:json
+bq load --source_format=CSV --skip_leading_rows=1 mdm_gemini.CITIBIKE_STATIONS ./CITIBIKE_STATIONS.csv \ name:string,latlng:string,capacity:numeric,num_bikes_available:numeric,num_docks_available:numeric,last_reported:timestamp,full_address_string:string
 
 # Step 3: Create Table and Enrich Address data
 
